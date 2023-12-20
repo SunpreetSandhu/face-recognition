@@ -4,20 +4,23 @@ import Logo from "./components/Logo/Logo";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import Rank from "./components/Rank/Rank";
 import ParticlesBg from "particles-bg";
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <ParticlesBg type="lines" bg={true} />
-      <Navigation />
-      <Logo />
-      <Rank />
-      <ImageLinkForm />
-      {/* {<Logo />
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <ParticlesBg type="lines" bg={true} />
+        <Navigation />
+        <Logo />
+        <Rank />
+        <ImageLinkForm />
+        {/* {<Logo />
         <ImageLinkForm />
         <FaceRecognition />} */}
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 export default App;

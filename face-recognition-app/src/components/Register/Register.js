@@ -1,8 +1,8 @@
 import React from "react";
 const Register = ({ onRouteChange }) => {
   return (
-    <article class="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
-      <main class="pa4 black-80">
+    <article class="br3 ba b--white-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
+      <main class="pa4 white-80">
         <div class="measure">
           <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
             <legend class="f1 fw6 ph0 mh0">Register</legend>
@@ -11,7 +11,7 @@ const Register = ({ onRouteChange }) => {
                 Name
               </label>
               <input
-                class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                class="white pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                 type="text"
                 name="name"
                 id="name"
@@ -23,7 +23,7 @@ const Register = ({ onRouteChange }) => {
                 Email
               </label>
               <input
-                class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                class="white pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                 type="email"
                 name="email-address"
                 id="email-address"
@@ -34,7 +34,7 @@ const Register = ({ onRouteChange }) => {
                 Password
               </label>
               <input
-                class="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                class="white b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                 type="password"
                 name="password"
                 id="password"
@@ -44,7 +44,7 @@ const Register = ({ onRouteChange }) => {
           <div class="">
             <input
               onClick={() => onRouteChange("home")}
-              class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
+              class="white b ph3 pv2 input-reset ba b--white bg-transparent grow pointer f6 dib"
               type="submit"
               value="Register"
             />

@@ -27,8 +27,14 @@ class Signin extends React.Component {
       }),
     })
       .then((response) => response.json())
-      .then((data) => {
-        if (data === "success") {
+      .then((user) => {
+        console.log(user);
+        if (user.id) {
+          console.log("hello");
+
+          // does the user exist? Did we receive a user with a property of id?
+          this.props.loadUser(user);
+          console.log("hello");
           this.props.onRouteChange("home");
         }
       });
@@ -38,7 +44,7 @@ class Signin extends React.Component {
     return (
       <article class="br3 ba b--white-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
         <main class="pa4 white-80">
-          <form class="measure">
+          <div class="measure">
             <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
               <legend class="f1 fw6 ph0 mh0">Sign In</legend>
               <div class="mt3">
@@ -82,7 +88,7 @@ class Signin extends React.Component {
                 Register
               </p>
             </div>
-          </form>
+          </div>
         </main>
       </article>
     );

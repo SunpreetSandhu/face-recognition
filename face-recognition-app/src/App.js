@@ -141,13 +141,16 @@ class App extends Component {
       .then((response) => response.json())
       .then((response) => {
         if (response) {
-          fetch("http://localhost:3000/image", {
-            method: "put",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              id: this.state.user.id,
-            }),
-          })
+          fetch(
+            "https://ancient-inlet-82685-2e707f107453.herokuapp.com/image",
+            {
+              method: "put",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                id: this.state.user.id,
+              }),
+            }
+          )
             .then((response) => response.json())
             .then((count) => {
               this.setState(Object.assign(this.state.user, { entries: count }));
